@@ -24,11 +24,11 @@ punctuations = punctuation.replace('$', '')
    
 def normalize(text):
     acronym_or_letter_sequence = re.compile('^[A-Z]{2,}$')
-    date = re.compile('^([1-9]|0[1-9]|1[0-2])/([1-9]|[12][0-9]|3[0-1])/[0-9][0-9]$')
+    date = re.compile('^([1-9]|0[1-9]|1[0-2])/([1-9]|[12][0-9]|3[0-1])/([0-9]{2}|[0-9]{4})$')
     email = re.compile('^[^@\.]+@[^@\.]+\.[a-zA-Z]{3}$')
     abbrev = re.compile('^[A-Z][a-z]{0,3}\.$')
     currency = re.compile('^\$([1-9]{1}[0-9]{0,2}(\,[0-9]{3})*(\.[0-9]{1,10})?|[1-9]{1}[0-9]{0,}(\.[0-9]{1,10})?|0(\.[0-9]{1,10})?|(\.[0-9]{1,10})?)$')
-    year = re.compile('^(19|20)\d{2,4}$')
+    year = re.compile('^(19|20)\d{2}$')
     num = re.compile('^(\d*\.?\d+|\d{1,3}(,\d{3})*(\.\d+)?)$')
     time = re.compile('^[0-9]{1,2}(:[0-9]{1,2})+$')
     
