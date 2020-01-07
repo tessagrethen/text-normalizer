@@ -1,0 +1,4 @@
+compound-word-splitter==0.4
+nltk==3.3
+num2words==0.5.10
+pyenchant==2.0.0
